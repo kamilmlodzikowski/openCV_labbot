@@ -104,15 +104,6 @@ else
   imshow("Image circle found",fin);
   waitKey(1);
 
-if(1)
-{
-
-
-}
-else
-{
-
-}
 }
 
 int main(int argc, char **argv)
