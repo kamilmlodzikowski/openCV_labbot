@@ -17,6 +17,7 @@ ros::Publisher vel_pub;
 int mana=0;
 int prev_marker_size=0;
 vector<Vec3f> prev_circles;
+bool first=1;
 
 void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 {
@@ -90,6 +91,11 @@ if(GO)
   	vel->linear.x=-0.5;
   	vel->angular.z=0.0;
 //  	vel_pub.publish(vel);                                                        //uncomment for ride
+    if(first==1)
+    {
+      std::cout << " Bzi";
+      first=0;
+    }
 }
 else
 {
@@ -97,6 +103,10 @@ else
   	vel->linear.x=-0.0;
   	vel->angular.z=0.0;
 //  	vel_pub.publish(vel);                                                        //uncomment for ride
+    if(first==0)
+    {
+      first=1;
+    }
 }
 
 //  imshow("Image",image);
