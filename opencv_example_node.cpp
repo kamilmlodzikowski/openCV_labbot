@@ -93,8 +93,12 @@ if(GO)
 //  	vel_pub.publish(vel);                                                        //uncomment for ride
     if(first==1)
     {
-      std::cout << " Bzi";
+      cout << " Bzi";
       first=0;
+    }
+    else
+    {
+      cout<<"uu";
     }
 }
 else
@@ -106,6 +110,7 @@ else
     if(first==0)
     {
       first=1;
+      cout<<endl;
     }
 }
 
